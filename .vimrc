@@ -48,6 +48,7 @@ let g:solarized_contrast="high"
 let g:pymode_rope=0
 
 " syntastic settings
+let g:syntastic_java_checkers = ['glint', 'checkstyle']
 let g:syntastic_auto_loc_list=1
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_async=1
@@ -196,8 +197,6 @@ Glug corpweb plugin[mappings]
 " nnoremap ,b  :lcd %:p:s?/google3/.*$?/google3/? \| :!blaze build %:p:h:s?/home/\w*/\(\w*/\)*google3/??/... <CR>
 " test all files in dir
 " nnoremap ,t  :lcd %:p:s?/google3/.*$?/google3/? \| :!blaze test --test_output=errors %:p:h:s?/home/\w*/\(\w*/\)*google3/??/... <CR>
-" sort imports
-nnoremap ,s    :!/google/src/head/depot/google3/tools/java/sort_java_imports.py % <CR>
 " remove unused imports
 nnoremap ,r    :!/google/src/head/depot/google3/tools/java/remove_unused_imports.py --fix % <CR>
 
