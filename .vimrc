@@ -76,12 +76,12 @@ syntax enable
 set ls=2 " continuously show file name
 set formatoptions+=o " continue comment marker in new lines
 set scrolloff=3 " context lines around cursor
-set tabstop=2
-set expandtab
-set shiftwidth=2
+" set tabstop=2
+" set expandtab
+" set shiftwidth=2
 set incsearch
 set ignorecase
-set softtabstop=1
+" set softtabstop=1
 set textwidth=100
 set wrapmargin=100
 set nohls
@@ -172,9 +172,12 @@ Glug scampi
 Glug ft-java
 Glug coverage
 Glug coverage-google
+Glug blazedeps auto_filetypes=`['go', 'java']`
 " see help coverage-config
 
+Glug codefmt gofmt_executable="goimports"
 Glug codefmt-google
+autocmd FileType go AutoFormatBuffer gofmt
 " Autoformat BUILD files
 autocmd FileType bzl AutoFormatBuffer buildifier
 " Autoformat java files
